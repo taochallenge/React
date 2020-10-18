@@ -19,7 +19,7 @@ const routes = [
     {
         path: '/doc',
         component: Doc,
-        // pri: true,
+        pri: true,
         routes: [
             {
                 path: '/doc/core',
@@ -28,7 +28,6 @@ const routes = [
             {
                 path: '/doc/guide',
                 component: Guide,
-                pri: true,
             },
             {
                 path: '/doc/api',

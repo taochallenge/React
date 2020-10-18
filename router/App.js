@@ -37,7 +37,9 @@ function RouteWithSubRoutes(route){
         <Route
             path={route.path}
             render={props => (
-                <route.component {...props} routes={route.routes} />
+				<route.component
+				{...props} 
+				routes={route.routes} />
             )}
         />
     )
@@ -48,8 +50,8 @@ const App = () => {
 		<Header />
 		<Switch>
 			{
-				routes.map(route=>(
-					<RouteWithSubRoutes {...route}/>
+				routes.map((route,i)=>(
+					<RouteWithSubRoutes key={i} {...route}/>
 				))
 			}
 		</Switch>

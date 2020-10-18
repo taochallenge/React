@@ -21,8 +21,8 @@ const Doc = ({routes}) => {
         <div className='doc'>
             <div className="content">
                 <Switch>
-                    {routes.map(route=>(
-                        <RouteWithSubRoutes {...route}/>
+                    {routes.map((route,i)=>(
+                        <RouteWithSubRoutes key={i} {...route}/>
                     ))}
                 </Switch>
 
