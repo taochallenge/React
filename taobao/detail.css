@@ -1,0 +1,59 @@
+.navi-bar{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 99;
+}
+.btn-back{
+    display: flex;
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+    line-height: 24px;
+    background-color: rgba(0,0,0,0.4);
+    text-align: center;
+    color: white;
+    border-color: rgba(0,0,0,0);
+}
+.back{
+    font-size: 20px;
+}
+.bottom-bar{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    z-index: 99;
+    flex-direction: row;
+    background-color: white;
+}
+.bottom-bar>div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 55px;
+    height: 55px;
+    align-items: center;
+    color: #999;
+}
+.bottom-bar .bar-btn{
+    position: relative;
+    top: 7px;
+    right: 7px;
+    width: 37%;
+    height: 40px;
+    text-align: center;
+    cursor: pointer;
+    padding: 0;
+    color: white;
+    font-weight: bold;
+}
+.btn-addcart{
+    margin-left: 7px;
+    border-radius: 2rem 0 0 2rem;
+    background-image: linear-gradient(to right, #FFC500, #FF9402);
+}
+.btn-buynow{
+    border-radius: 0 2rem 2rem 0;
+    background-image: linear-gradient(to right, #FF7A00, #FE560A);
+}
