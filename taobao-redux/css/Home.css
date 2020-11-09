@@ -1,0 +1,106 @@
+.wrap{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.header{
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+    background-color: rgb(255,133,42);
+}
+.top{
+    height: 37px;
+}
+.header-bd{
+    padding: 6px 9px 6px 42px;
+    background-image: url(../images/taobao.png);
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+    background-position: 9px center;
+}
+.header-search{
+    background-color: #FF4E22;
+    display: block;
+    border-radius: 4px;
+    text-align: center;
+    color: white;    
+}
+.text{
+    display: inline-block;
+    height: 25px;
+    line-height: 25px;
+    font-size: 13px;
+}
+.text:before{
+    font-size: 13px;
+    display: inline-block;
+    color: white;
+    margin-right: 5px;
+}
+.recommend-container{
+    padding-left: 2%;
+    padding-right: 2%;
+}
+.recommend-hd{
+    padding: 12px 0;
+    width: 100%;
+    text-align: center;
+}
+.recommend-hd-bg {
+    width: 161px;
+    height: 19px;
+}
+.recommend-container a{
+    display: inline-block;
+    height: 100%;
+    position: relative;
+    width: 47%;
+    background: #fff;
+    margin-top: 9px;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-left: 4.5px;
+    margin-right: 4.5px;
+}
+.recommend-img {
+    width: 100%;
+    height: 65%;
+}
+.recommend-info {
+    padding-left: 10px;
+    padding-right: 9px;
+    height: 35%;
+    text-decoration: none;
+}
+.recommend-title {
+    margin-top: 18px;
+    height: 30px;
+    position: relative;
+    overflow: hidden;
+    line-height: 18px;
+}
+.recommend-title-p {
+    font-size: 15px;
+    color: #333333;
+}
+.recommend-price-box {
+    flex-direction: row;
+    height: 30px;
+    line-height: 30px;
+}
+.recommend-sign {
+    font-size: 11px;
+    color: #ff5500;
+    margin-right: 5px;
+}
+.recommend-price {
+    font-size: 14px;
+    line-height: 16px;
+    color: #ff5500;
+}
+.bottom{
+    height: 50px;
+}

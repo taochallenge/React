@@ -1,0 +1,41 @@
+.shou{
+    margin-top: 10px;
+    margin-left: 45%;
+    color:#FF5000;
+    font-size: 16px;
+    font-weight: bold;
+}
+.shou-lists{
+    margin-top: 20px;
+    height: 140px;
+    margin-left: 10px;
+}
+.shou-img{
+    width: 140px;
+    float: left;
+}
+.shou-img img{
+    width: 100%;
+    border-radius: 5px;
+}
+.shou-word{
+    display: inline-block;
+    margin-left: 10px;
+}
+.shou-title{
+    margin-bottom: 20px;
+}
+.shou-sign,.shou-price{
+    color: #FF5000;
+}
+.shou-price{
+    font-size: 20px
+}
+.btn{
+    display: block;
+    color: #FF5000;
+    margin-top: 60px;
+    border-color: #FF5000;
+    border-radius: 5px;
+    background-color: white;
+}
