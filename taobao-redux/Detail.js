@@ -6,15 +6,15 @@ const Detail = (props) => {
     return (
         <div>
             <img
-                src={props.location.img}
+                src={props.location.good.img}
                 style={{ width: '100%' }}
             />
             <div className='detail-price'>
                 <span className='sign'>￥</span>
-                <span className='price'>{props.location.price}</span>
+                <span className='price'>{props.location.good.price}</span>
             </div>
             <div className='title'>
-                {props.location.title}
+                {props.location.good.title}
             </div>
             <div className='navi-bar'>
                 <button
@@ -35,16 +35,23 @@ const Detail = (props) => {
                 <div
                     className='btn-collect'
                     onClick={() => {
+                        if(!props.username){
+                            props.history.push({
+                                pathname : '/login',
+                                flag : 'detail',
+                                id: props.location.id
+                            })
+                        }
                         props.dispatch({
                             type : 'SHOUCANG',
-                            shoucang : props.datalist[props.location.id]
+                            shoucang : props.location.good
                         })
                     }}
                 >
                     <span className='img'>
                         {
                             props.shoucang.some((data) => {
-                                return data.id == props.datalist[props.location.id].id
+                                return data.id == props.location.good.id
                             })
                             ? <img src={require('./images/shoucang1.png')}></img>
                             : <img src={require('./images/shoucang.png')}></img>
@@ -53,7 +60,7 @@ const Detail = (props) => {
                     <span className='btn-text'>
                         {
                             props.shoucang.some((data) => {
-                                return data.id == props.datalist[props.location.id].id
+                                return data.id == props.location.good.id
                             })
                             ? '已收藏' 
                             : '收藏'
@@ -74,6 +81,7 @@ const Detail = (props) => {
 const mapStateToProps = (state) => ({
     datalist: state.datalist,
     shoucang: state.shoucang,
+    username: state.userinfo
 })
 
 export default connect(mapStateToProps)(Detail)

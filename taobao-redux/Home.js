@@ -33,10 +33,8 @@ const Home = (props) => {
                         <a  key={index}
                             onClick={() => props.history.push({
                                 pathname: '/detail', 
+                                good: item,
                                 id: index,
-                                img: item.img,
-                                title : item.title,
-                                price : item.price
                             })
                         }>
                             <img className="recommend-img" src={item.img} />

@@ -23,8 +23,15 @@ const Login = (props) => {
                 <button 
                     className='login-btn'
                     onClick = {() => {
-                        props.dispatch(login())
-                        props.history.push('/cart')
+                        props.dispatch(login());
+                        if(props.location.flag == 'detail'){
+                            props.history.push({
+                                pathname: '/detail',
+                                good: props.datalist[props.location.id]
+                            })
+                        }else{
+                            props.history.push('/cart')
+                        }
                     }}
                 >登录</button>
             }
@@ -32,5 +39,8 @@ const Login = (props) => {
     )
 }
 
+const mapStateToProps = (state) => ({
+    datalist: state.datalist
+})
 
-export default connect()(Login)
+export default connect(mapStateToProps)(Login)
